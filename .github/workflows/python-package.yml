@@ -5,7 +5,7 @@ name: Python package
 
 on:
   push:
-    branches: [ main, fix-pytest ]
+    branches: [ main, fix-pytest, package-structure ]
   pull_request:
     branches: [ main, fix-pytest ]
 
@@ -38,7 +38,7 @@ jobs:
         path: public/
     - name: Test with pytest
       run: |
-        pytest
+        python -m pytest
   test:
     needs: build
     runs-on: ubuntu-latest
@@ -69,6 +69,6 @@ jobs:
         path: public/
     - name: Test with pytest
       run: |
-        pytest
+        python -m pytest
       env:
         CI: true

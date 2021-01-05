@@ -1,4 +1,4 @@
-from example_pkg import example
+from example import example
 
 def test_is_even():
   assert example.is_even(2) is True
