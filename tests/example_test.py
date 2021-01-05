@@ -1,5 +1,5 @@
-from example_pkg.example import is_even
+from example_pkg import example
 
 def test_is_even():
-  assert is_even(2) is True
-  assert is_even(3) is False
+  assert example.is_even(2) is True
+  assert example.is_even(3) is False
